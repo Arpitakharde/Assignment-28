@@ -50,7 +50,7 @@
    
     </style>
 </head>
-<body>
+<body id="body">
          
     <h1 id="heading1"> Season </h1>
 
@@ -65,7 +65,30 @@
     </div>
     
     <script>
-        
+        function changeSeason(season) {
+        const headingElement = document.getElementById('heading1');
+        const imageElement = document.getElementById("image");
+        const bodyElement = document.getElementById("body");
+
+           if (season == "summer")
+              {
+                headingElement.innerText = "Summer Season Start...";
+                imageElement.src = "./image/summer.avif";
+                bodyElement.style.backgroundColor = "#ffbf00";
+              }
+           else if (season == "winter")
+              {
+                headingElement.innerText = "Winter Season Start...";
+                imageElement.src = "./image/winter1.avif";
+                bodyElement.style.backgroundColor = "#ecc6d9";
+              } 
+           else
+             {
+                headingElement.innerText = "Mansoon Season Start...";
+                imageElement.src = "./image/mansoon.avif";
+                bodyElement.style.backgroundColor = "#d9d9d9";
+             }
+        }
     </script>
 </body>
 </html>
